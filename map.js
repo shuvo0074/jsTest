@@ -135,3 +135,11 @@ function myFunction(x) {
 console.log(newFlag);
 
 // problem 4: add color propertyr to every object in students. Use Spread operator.
+Object.keys(students).map(function (i) {
+  const studentFlag = students[i];
+  let monthNum = studentFlag["month"];
+  let monthName = months[monthNum - 1];
+  let colors = color[monthName];
+  studentFlag.color = [...colors].join("");
+});
+console.log(students);
