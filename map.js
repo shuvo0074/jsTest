@@ -86,18 +86,18 @@ let text1 = "";
 Object.keys(students).map(function (i) {
   let attn = students[i]["attendance"];
   let mark = students[i]["marks"];
-  text1 += `${i}${
+  text1 += `${i}'s attendance is ${
     attn >= 8
-      ? `'s attendance is good`
+      ? `good`
       : attn <= 7 && attn >= 4
-      ? `'s attendance is average`
-      : `'s attendance is bad`
-  }${
+      ? `average`
+      : `bad`
+  } , marks is ${
     mark >= 80
-      ? ` , marks is good. `
+      ? `good. `
       : mark <= 79 && mark >= 40
-      ? ` , marks is average. `
-      : ` , marks is bad. `
+      ? `average. `
+      : `bad. `
   }`;
 });
 
@@ -111,6 +111,7 @@ Object.keys(students).map(function (i) {
   let monthNum = students[i]["month"];
   let monthName = months[monthNum - 1];
   let colors = color[monthName];
+  const studentFlag = students[i]
   text2 += ` ${i}'s color is ${colors}.`;
 });
 // console.log(text2);
