@@ -133,3 +133,5 @@ function myFunction(x) {
       : ` "big number."`;
 }
 console.log(newFlag);
+
+// problem 4: add color propertyr to every object in students. Use Spread operator.
