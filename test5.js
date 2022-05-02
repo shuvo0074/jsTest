@@ -1,2 +1,3 @@
 // part 1: create a counter which returns wrong count :P .Add a random number to the count and print the count every second. initial value is 0.
 // part 2: custom hook. create a hook which returns the previous value of a variable. suppose the counter in part 1 has values like this: 0,3,10,14 for first 4 seconds. so for first 4 seconds , the hook will return undefined,0,3,10
+// Logic should be like this: there should be two states,"currentValue", "previousValue", first value of currentValue is zero,first value of previousValue is undefined. Then before the timer increases the currentValue, save the current value to previousValue and add a random number to current value.
